@@ -6,11 +6,11 @@
     <title>みんなのテクノロジーお披露目会</title>
 
     <!-- OGP (Open Graph Protocol) tags for social sharing -->
-    <meta property="og:title" content="みんなのテクノロジーお披露目会">
-    <meta property="og:description" content="あなたの作ったものをみせてくれ！様々なコミュニティから集まったメンバーが、最近作ったものや学んだことなどをカジュアルに発表し、交流するイベントです。">
+    <meta property="og:title" content="みんなのテクノロジーお披露目会 - みんてく🎉">
+    <meta property="og:description" content="クリエイターや技術者がつくった作品や知識を自由に発表して、新しい出会いやコラボが生まれる楽しい交流イベント。2025年9月13日開催！">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mintech2025.github.io/0913event/">
-    <meta property="og:image" content="https://placehold.co/1200x630/0a0a0a/e5e7eb?text=MINTECH%0AOHIROMEKAI">
+    <meta property="og:url" content="https://araimono.github.io/mintech/">
+    <meta property="og:image" content="https://kagekin.github.io/mintech2025/img/ogp-image.png">
     <meta name="twitter:card" content="summary_large_image">
 
 
@@ -39,6 +39,8 @@
             border-radius: 12px;
             border: 1px solid #374151; /* gray-700 */
             transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         .card:hover {
             transform: translateY(-5px);
@@ -83,6 +85,7 @@
         .community-logo {
             filter: invert(90%) sepia(10%) saturate(100%) hue-rotate(180deg) brightness(100%) contrast(90%);
             transition: filter 0.3s ease;
+            object-fit: contain;
         }
         .card:hover .community-logo {
             filter: none;
@@ -111,7 +114,7 @@
                     あなたの作ったものをみせてくれ！
                 </p>
                 <div class="bg-gray-800/50 inline-block p-4 rounded-lg mb-8">
-                    <p class="text-lg md:text-xl font-bold text-white">2025.09.13 (Sat) <span class="mx-2">|</span> AiHUB株式会社 神田オフィス</p>
+                    <p class="text-lg md:text-xl font-bold text-white">2025.09.13 (Sat) 11:00-16:00 <span class="mx-2">|</span> AiHUB株式会社 神田オフィス</p>
                 </div>
                 <div>
                     <a href="https://forms.gle/cXfnzpVk4zMUdQ9T8" target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -128,7 +131,7 @@
                     <h2 class="section-title">どんなイベント？</h2>
                 </div>
                 <p class="max-w-2xl mx-auto leading-relaxed text-gray-400">
-                    「みんなのテクノロジーお披露目会」は、様々なコミュニティから集まったメンバーが、最近作ったものや学んだこと、ハマっている技術などをカジュアルに発表し、交流するイベントです。技術のジャンルやレベルは問いません。あなたの「好き」をぜひ見せに来てください！
+                    クリエイターや技術者がつくった作品や知識を自由に発表して、新しい出会いやコラボが生まれる楽しい交流イベントです✨ みんなで楽しく交流して、新しいアイデアや友達をつくりましょう！
                 </p>
             </div>
         </section>
@@ -141,19 +144,19 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="card p-8">
-                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-comments"></i></div>
-                        <h3 class="text-xl font-bold mb-2 text-white">交流</h3>
-                        <p class="text-gray-400">様々な技術的背景を持つ参加者と自由に交流し、新たな発見や繋がりが生まれます。</p>
+                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-white">技術作品の展示</h3>
+                        <p class="text-gray-400">AI、Web3、メタバースなど、どんな分野の技術作品でも展示できます！ジャンルは問わないので、自由に発表してくださいね😊</p>
                     </div>
                     <div class="card p-8">
-                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-microphone"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">トークセッション</h3>
-                        <p class="text-gray-400">各コミュニティの代表者によるLT（ライトニングトーク）や、テーマに沿ったトークセッションを企画しています。</p>
+                        <p class="text-gray-400">自分の活動や技術についてみんなに発表できるチャンスです！みんなで知識をシェアして、一緒に学び合いましょう🚀</p>
                     </div>
                     <div class="card p-8">
-                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-lightbulb"></i></div>
-                        <h3 class="text-xl font-bold mb-2 text-white">作品展示</h3>
-                        <p class="text-gray-400">あなたが作ったソフトウェア、ハードウェア、Webサービスなどを展示し、多くの人からフィードバックをもらえます。</p>
+                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-users"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-white">自由な交流</h3>
+                        <p class="text-gray-400">出展者も来場者もみんなで気軽におしゃべりや情報交換ができる環境を用意しています！</p>
                     </div>
                 </div>
             </div>
@@ -167,40 +170,52 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Community Card -->
-                    <div class="card p-6 flex flex-col items-center text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/aicammu.png" alt="AICAMMU" class="h-20 mb-4 community-logo">
-                        <h3 class="font-bold text-lg mb-2 text-white">AICAMMU</h3>
-                        <p class="text-gray-400 text-sm">AIやカメラ、画像処理技術をテーマにしたコミュニティです。</p>
+                    <div class="card p-6 text-center">
+                        <img src="https://kagekin.github.io/mintech2025/img/aicommu-logo.png" alt="Aicommu" class="h-20 mb-4 mx-auto community-logo">
+                        <div class="flex-grow flex flex-col">
+                            <h3 class="font-bold text-lg mb-2 text-white">Aicommu</h3>
+                            <p class="text-gray-400 text-sm flex-grow">Aicommuは、AI×web3×OSSの力で価値を増幅させ、学び・交流・プロジェクト推進を加速させるAI時代の自立分散型コミュニティです。</p>
+                        </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 flex flex-col items-center text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/k-hack.png" alt="K-HACK" class="h-20 mb-4 community-logo">
-                        <h3 class="font-bold text-lg mb-2 text-white">K-HACK</h3>
-                        <p class="text-gray-400 text-sm">川崎のITエンジニアコミュニティ。もくもく会や勉強会を開催。</p>
+                    <div class="card p-6 text-center">
+                        <img src="https://kagekin.github.io/mintech2025/img/4dl-logo.png" alt="4DL Technologies株式会社" class="h-20 mb-4 mx-auto community-logo">
+                         <div class="flex-grow flex flex-col">
+                            <h3 class="font-bold text-lg mb-2 text-white">4DL Technologies株式会社</h3>
+                            <p class="text-gray-400 text-sm flex-grow">専門分野で生成AIを使いこなす人材向けリスキリングサービスを企画・開発。メタバース/XRについても調査研究を進めています。</p>
+                        </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 flex flex-col items-center text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/soft-dev.png" alt="ソフト開発部" class="h-20 mb-4 community-logo">
-                        <h3 class="font-bold text-lg mb-2 text-white">ソフト開発部</h3>
-                        <p class="text-gray-400 text-sm">ソフトウェア開発に関する情報交換や交流を行うコミュニティ。</p>
+                    <div class="card p-6 text-center">
+                        <img src="https://kagekin.github.io/mintech2025/img/socialnova-logo.png" alt="ソーシャルノバ" class="h-20 mb-4 mx-auto community-logo">
+                         <div class="flex-grow flex flex-col">
+                            <h3 class="font-bold text-lg mb-2 text-white">ソーシャルノバ</h3>
+                            <p class="text-gray-400 text-sm flex-grow">メタバースのイベント・コミュニティ・居場所づくりを手掛けるバーチャルクリエイティブカンパニー。バーチャル市民の仕事の場の創出を目指しています。</p>
+                        </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 flex flex-col items-center text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/design-cafe.png" alt="Design Cafe" class="h-20 mb-4 community-logo">
-                        <h3 class="font-bold text-lg mb-2 text-white">Design Cafe</h3>
-                        <p class="text-gray-400 text-sm">デザイナーやデザインに興味がある人が集まるコミュニティ。</p>
+                    <div class="card p-6 text-center">
+                        <img src="https://kagekin.github.io/mintech2025/img/jxc-logo.png" alt="Japan X College" class="h-20 mb-4 mx-auto community-logo">
+                         <div class="flex-grow flex flex-col">
+                            <h3 class="font-bold text-lg mb-2 text-white">Japan X College</h3>
+                            <p class="text-gray-400 text-sm flex-grow">JXCは、場所や経済背景に左右されず、挑戦する若者ヘヒトモノカネの環流を作るべく"分散型メディア"を目指している団体です。</p>
+                        </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 flex flex-col items-center text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/fin-go.png" alt="FIN-GO" class="h-20 mb-4 community-logo">
-                        <h3 class="font-bold text-lg mb-2 text-white">FIN-GO</h3>
-                        <p class="text-gray-400 text-sm">金融×テクノロジー(FinTech)に特化したエンジニアコミュニティ。</p>
+                    <div class="card p-6 text-center">
+                        <img src="https://kagekin.github.io/mintech2025/img/osakana-logo.png" alt="おさかなだお長崎" class="h-20 mb-4 mx-auto community-logo">
+                         <div class="flex-grow flex flex-col">
+                            <h3 class="font-bold text-lg mb-2 text-white">おさかなだお長崎</h3>
+                            <p class="text-gray-400 text-sm flex-grow">「長崎のうまいサカナの未来をつくる」を活動テーマにしたLocal DAO（分散型自律組織）です。Web3の技術を活用しています！</p>
+                        </div>
                     </div>
                      <!-- Community Card -->
-                    <div class="card p-6 flex flex-col items-center text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/meccha.png" alt="meccha" class="h-20 mb-4 community-logo">
-                        <h3 class="font-bold text-lg mb-2 text-white">meccha</h3>
-                        <p class="text-gray-400 text-sm">関西発の技術好きが集まるコミュニティ。VRやメタバースが中心。</p>
+                    <div class="card p-6 text-center">
+                        <img src="https://kagekin.github.io/mintech2025/img/3dkobo-logo.png" alt="3DKOBO" class="h-20 mb-4 mx-auto community-logo">
+                         <div class="flex-grow flex flex-col">
+                            <h3 class="font-bold text-lg mb-2 text-white">3DKOBO</h3>
+                            <p class="text-gray-400 text-sm flex-grow">3Dモデリングやイベント主催を行うメタバースのものづくりや文化を作るメタクリエイター。リアルとバーチャルをつなぐ活動に取り組んでいます。</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,26 +232,29 @@
                         <div class="card p-8">
                             <h3 class="font-bold text-xl mb-4 border-b border-gray-700 pb-2 text-white">イベント概要</h3>
                             <ul class="space-y-3 text-gray-300">
-                                <li><strong>日時:</strong> 2025年9月13日(土) 13:00-18:00</li>
-                                <li><strong>場所:</strong> AiHUB株式会社 神田オフィス</li>
-                                <li><strong>住所:</strong> 東京都千代田区神田紺屋町15</li>
-                                <li><strong>参加費:</strong> 1,000円 (軽食・ドリンク付き)</li>
-                                <li><strong>定員:</strong> 50名</li>
+                                <li><strong>イベント名:</strong> みんなのテクノロジーお披露目会（みんてく）</li>
+                                <li><strong>開催日時:</strong> 2025年9月13日（土）11:00〜16:00</li>
+                                <li><strong>開催場所:</strong> AiHUB株式会社 神田オフィス</li>
+                                <li><strong>住所:</strong> 〒101-0041 東京都千代田区神田須田町2丁目1−1 MA SQUARE AKIHABARA 4F</li>
+                                <li><strong>参加費用:</strong> 無料！🎉</li>
+                                <li><strong>予定参加者数:</strong> 延べ40名〜60名</li>
                             </ul>
                         </div>
                         <div class="card p-8">
-                            <h3 class="font-bold text-xl mb-4 border-b border-gray-700 pb-2 text-white">当日のタイムテーブル</h3>
+                            <h3 class="font-bold text-xl mb-4 border-b border-gray-700 pb-2 text-white">1日のスケジュール</h3>
                             <ul class="space-y-3 text-gray-300">
-                                <li><strong>13:00-</strong> 開場・受付開始</li>
-                                <li><strong>13:30-</strong> オープニング・LT大会</li>
-                                <li><strong>15:00-</strong> 展示・交流会</li>
-                                <li><strong>17:30-</strong> クロージング</li>
+                                <li><strong>9:00</strong> - スタッフ入り</li>
+                                <li><strong>11:00</strong> - イベント開場・トークイベント・ブース展示開始</li>
+                                <li><strong>16:00</strong> - イベント終了</li>
+                                <li><strong>16:15</strong> - 出展者交流会開始🍻</li>
+                                <li><strong>18:30</strong> - 出展者交流会終了</li>
+                                <li><strong>19:00</strong> - 撤収完了</li>
                             </ul>
                         </div>
                     </div>
                      <div class="rounded-lg overflow-hidden h-96 md:h-full w-full">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.413551528472!2d139.7719635152591!3d35.69145658019198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c018265a95b%3A0x23b6d42629f1c11!2z44CSMTAxLTAwMzUg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw6aGM5b2i55S677yR77yV!5e0!3m2!1sja!2sjp!4v1663000000000!5m2!1sja!2sjp" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.482239339318!2d139.7702333155992!3d35.68975998019245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c018265a95b%3A0x23b6d42629f1c11!2sMA%2SQUARE%20AKIHABARA!5e0!3m2!1sja!2sjp!4v1724762828574!5m2!1sja!2sjp" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -250,17 +268,17 @@
             </div>
         </section>
 
-         <!-- Application -->
-        <section id="application" class="py-20">
+         <!-- Contact Section -->
+        <section id="contact" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="section-title-container">
-                    <h2 class="section-title">参加申込について</h2>
+                    <h2 class="section-title">💬 質問がある時は</h2>
                 </div>
                 <div class="max-w-md mx-auto">
                     <div class="card p-8 text-center">
-                        <h3 class="font-bold text-xl mb-4 text-white">一般参加</h3>
-                        <p class="text-gray-400 mb-6">イベントの参加、LTの聴講、展示の見学ができます。交流を楽しみたい方はこちら。</p>
-                        <a href="https://forms.gle/cXfnzpVk4zMUdQ9T8" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block">申し込む</a>
+                        <div class="text-5xl text-indigo-400 mb-4"><i class="fab fa-discord"></i></div>
+                        <h3 class="font-bold text-xl mb-4 text-white">AiCommunity Discordサーバー</h3>
+                        <p class="text-gray-400 mb-6">みんてくチャンネルで気軽に声をかけてください✨</p>
                     </div>
                 </div>
             </div>
@@ -271,7 +289,7 @@
     <!-- Footer -->
     <footer class="bg-black text-white py-10">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-500">&copy; 2025 みんなのテクノロジーお披露目会 実行委員会</p>
+            <p class="text-gray-500">&copy; 2025 みんなのテクノロジーお披露目会（みんてく）</p>
         </div>
     </footer>
 
