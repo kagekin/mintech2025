@@ -87,9 +87,24 @@
         .community-logo {
             object-fit: contain;
         }
+        .writing-mode-vertical-rl {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
     </style>
 </head>
 <body class="antialiased">
+
+    <!-- Share Buttons -->
+    <div class="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex flex-col items-center space-y-2 bg-gray-800/80 backdrop-blur-sm p-2 rounded-l-lg">
+        <h3 class="text-white text-xs font-bold mb-2 writing-mode-vertical-rl transform rotate-0">シェア！</h3>
+        <a id="twitter-share" href="#" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-400 transition-colors p-2" aria-label="Xでシェア">
+            <i class="fab fa-twitter fa-lg"></i>
+        </a>
+        <a id="facebook-share" href="#" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-600 transition-colors p-2" aria-label="Facebookでシェア">
+            <i class="fab fa-facebook fa-lg"></i>
+        </a>
+    </div>
 
     <!-- Header -->
     <header class="py-6">
@@ -249,17 +264,6 @@
                                 <li><strong>予定参加者数:</strong> 延べ40名〜60名</li>
                             </ul>
                         </div>
-                        <div class="card p-8">
-                            <h3 class="font-bold text-xl mb-4 border-b border-gray-700 pb-2 text-white">1日のスケジュール</h3>
-                            <ul class="space-y-3 text-gray-300">
-                                <li><strong>9:00</strong> - スタッフ入り</li>
-                                <li><strong>11:00</strong> - イベント開場・トークイベント・ブース展示開始</li>
-                                <li><strong>16:00</strong> - イベント終了</li>
-                                <li><strong>16:15</strong> - 出展者交流会開始🍻</li>
-                                <li><strong>18:30</strong> - 出展者交流会終了</li>
-                                <li><strong>19:00</strong> - 撤収完了</li>
-                            </ul>
-                        </div>
                     </div>
                      <div class="rounded-lg overflow-hidden h-96 md:h-full w-full">
                         <iframe 
@@ -290,6 +294,19 @@
             <p class="text-gray-500">&copy; 2025 みんなのテクノロジーお披露目会（みんてく）</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const shareUrl = encodeURIComponent('https://araimono.github.io/mintech/');
+            const shareText = encodeURIComponent('みんなのテクノロジーお披露目会 - みんてく🎉 #みんてく');
+
+            const twitterShareLink = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`;
+            document.getElementById('twitter-share').href = twitterShareLink;
+
+            const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+            document.getElementById('facebook-share').href = facebookShareLink;
+        });
+    </script>
 
 </body>
 </html>
