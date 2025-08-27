@@ -72,10 +72,12 @@
             background: #2563eb; /* blue-600 */
             color: white;
             font-weight: 700;
-            padding: 14px 36px;
+            padding: 1rem 3rem; /* Increased padding */
+            font-size: 1.125rem; /* text-lg */
             border-radius: 9999px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            display: inline-block;
         }
         .btn-primary:hover {
             background: #1d4ed8; /* blue-700 */
@@ -83,12 +85,7 @@
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
         .community-logo {
-            filter: invert(90%) sepia(10%) saturate(100%) hue-rotate(180deg) brightness(100%) contrast(90%);
-            transition: filter 0.3s ease;
             object-fit: contain;
-        }
-        .card:hover .community-logo {
-            filter: none;
         }
     </style>
 </head>
@@ -136,11 +133,11 @@
             </div>
         </section>
 
-        <!-- What you can do -->
+        <!-- Event Contents -->
         <section class="py-20 bg-gray-900">
             <div class="container mx-auto px-6 text-center">
                  <div class="section-title-container">
-                    <h2 class="section-title">こんなことができるよ！</h2>
+                    <h2 class="section-title">イベント内容</h2>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="card p-8">
@@ -170,48 +167,60 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Community Card -->
-                    <div class="card p-6 text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/aicommu-logo.png" alt="Aicommu" class="h-20 mb-4 mx-auto community-logo">
+                    <div class="card p-6 text-center items-center">
+                        <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                            <img src="https://kagekin.github.io/mintech2025/img/aicommu-logo.png" alt="Aicommu" class="h-20 community-logo">
+                        </div>
                         <div class="flex-grow flex flex-col">
                             <h3 class="font-bold text-lg mb-2 text-white">Aicommu</h3>
                             <p class="text-gray-400 text-sm flex-grow">Aicommuは、AI×web3×OSSの力で価値を増幅させ、学び・交流・プロジェクト推進を加速させるAI時代の自立分散型コミュニティです。</p>
                         </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/4dl-logo.png" alt="4DL Technologies株式会社" class="h-20 mb-4 mx-auto community-logo">
+                    <div class="card p-6 text-center items-center">
+                        <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                            <img src="https://kagekin.github.io/mintech2025/img/4dl-logo.png" alt="4DL Technologies株式会社" class="h-20 community-logo">
+                        </div>
                          <div class="flex-grow flex flex-col">
                             <h3 class="font-bold text-lg mb-2 text-white">4DL Technologies株式会社</h3>
                             <p class="text-gray-400 text-sm flex-grow">専門分野で生成AIを使いこなす人材向けリスキリングサービスを企画・開発。メタバース/XRについても調査研究を進めています。</p>
                         </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/socialnova-logo.png" alt="ソーシャルノバ" class="h-20 mb-4 mx-auto community-logo">
+                    <div class="card p-6 text-center items-center">
+                        <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                            <img src="https://kagekin.github.io/mintech2025/img/socialnova-logo.png" alt="ソーシャルノバ" class="h-20 community-logo">
+                        </div>
                          <div class="flex-grow flex flex-col">
                             <h3 class="font-bold text-lg mb-2 text-white">ソーシャルノバ</h3>
                             <p class="text-gray-400 text-sm flex-grow">メタバースのイベント・コミュニティ・居場所づくりを手掛けるバーチャルクリエイティブカンパニー。バーチャル市民の仕事の場の創出を目指しています。</p>
                         </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/jxc-logo.png" alt="Japan X College" class="h-20 mb-4 mx-auto community-logo">
+                    <div class="card p-6 text-center items-center">
+                        <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                            <img src="https://kagekin.github.io/mintech2025/img/jxc-logo.png" alt="Japan X College" class="h-20 community-logo">
+                        </div>
                          <div class="flex-grow flex flex-col">
                             <h3 class="font-bold text-lg mb-2 text-white">Japan X College</h3>
                             <p class="text-gray-400 text-sm flex-grow">JXCは、場所や経済背景に左右されず、挑戦する若者ヘヒトモノカネの環流を作るべく"分散型メディア"を目指している団体です。</p>
                         </div>
                     </div>
                     <!-- Community Card -->
-                    <div class="card p-6 text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/osakana-logo.png" alt="おさかなだお長崎" class="h-20 mb-4 mx-auto community-logo">
+                    <div class="card p-6 text-center items-center">
+                        <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                            <img src="https://kagekin.github.io/mintech2025/img/osakana-logo.png" alt="おさかなだお長崎" class="h-20 community-logo">
+                        </div>
                          <div class="flex-grow flex flex-col">
                             <h3 class="font-bold text-lg mb-2 text-white">おさかなだお長崎</h3>
                             <p class="text-gray-400 text-sm flex-grow">「長崎のうまいサカナの未来をつくる」を活動テーマにしたLocal DAO（分散型自律組織）です。Web3の技術を活用しています！</p>
                         </div>
                     </div>
                      <!-- Community Card -->
-                    <div class="card p-6 text-center">
-                        <img src="https://kagekin.github.io/mintech2025/img/3dkobo-logo.png" alt="3DKOBO" class="h-20 mb-4 mx-auto community-logo">
+                    <div class="card p-6 text-center items-center">
+                        <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                           <img src="https://kagekin.github.io/mintech2025/img/3dkobo-logo.png" alt="3DKOBO" class="h-20 community-logo">
+                        </div>
                          <div class="flex-grow flex flex-col">
                             <h3 class="font-bold text-lg mb-2 text-white">3DKOBO</h3>
                             <p class="text-gray-400 text-sm flex-grow">3Dモデリングやイベント主催を行うメタバースのものづくりや文化を作るメタクリエイター。リアルとバーチャルをつなぐ活動に取り組んでいます。</p>
@@ -264,6 +273,11 @@
                             class="rounded-lg">
                         </iframe>
                     </div>
+                </div>
+                <div class="text-center mt-12">
+                     <a href="https://forms.gle/cXfnzpVk4zMUdQ9T8" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        参加登録はこちら
+                    </a>
                 </div>
             </div>
         </section>
