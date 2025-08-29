@@ -46,6 +46,9 @@
             transform: translateY(-5px);
             border-color: #667eea;
         }
+        .clickable-card {
+            cursor: pointer;
+        }
         .section-title-container {
             text-align: center;
             margin-bottom: 3rem;
@@ -90,6 +93,110 @@
         .writing-mode-vertical-rl {
             writing-mode: vertical-rl;
             text-orientation: mixed;
+        }
+        
+        /* AI Professor Styles */
+        #ai-professor {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        #ai-professor-icon {
+            font-size: 4rem;
+        }
+        #ai-professor-bubble {
+            position: relative;
+            background: #1f2937;
+            color: #e5e7eb;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            border: 1px solid #374151;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #ai-professor-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: -10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #1f2937 transparent transparent;
+        }
+        
+        /* Ninja Styles */
+        #mintech-ninja {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 4rem;
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+            animation: ninja-bob 2s ease-in-out infinite;
+        }
+        @keyframes ninja-bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* Ninja Message & Smoke Bomb Styles */
+        #ninja-message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            z-index: 101;
+            text-align: center;
+            font-size: 1.25rem;
+            display: none;
+            border: 2px solid #60a5fa;
+        }
+        #smoke-bomb {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            font-size: 20rem;
+            transform: translate(-50%, -50%);
+            z-index: 102;
+            display: none;
+            animation: smoke-puff 1.5s forwards;
+            pointer-events: none;
+        }
+        @keyframes smoke-puff {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(0.1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+        }
+
+        /* Animation Overlay */
+        #animation-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.9);
+            z-index: 200;
+            display: none;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        #animation-overlay.active {
+            display: block;
+            pointer-events: all;
         }
     </style>
 </head>
@@ -155,17 +262,17 @@
                     <h2 class="section-title">イベント内容</h2>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card p-8">
+                    <div id="tech-card" class="card p-8 clickable-card">
                         <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-laptop-code"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">技術作品の展示</h3>
                         <p class="text-gray-400">AI、Web3、メタバースなど、どんな分野の技術作品でも展示できます！ジャンルは問わないので、自由に発表してくださいね😊</p>
                     </div>
-                    <div class="card p-8">
+                    <div id="talk-card" class="card p-8 clickable-card">
                         <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-microphone"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">トークセッション</h3>
                         <p class="text-gray-400">自分の活動や技術についてみんなに発表できるチャンスです！みんなで知識をシェアして、一緒に学び合いましょう🚀</p>
                     </div>
-                    <div class="card p-8">
+                    <div id="network-card" class="card p-8 clickable-card">
                         <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-users"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">自由な交流</h3>
                         <p class="text-gray-400">出展者も来場者もみんなで気軽におしゃべりや情報交換ができる環境を用意しています！</p>
@@ -264,7 +371,7 @@
                         </ul>
                     </div>
                      <div class="rounded-lg overflow-hidden h-96 md:h-full w-full">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.51434683765189!2d139.77134316404718!3d35.69596841345397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c02eb6b69f9%3A0x1470113cb866bedf!2zTWEgU3F1YXJlIEFraWhhYmFyYSwgNGYg77yS5LiB55uuLe-8kS3vvJEg56We55Sw6aCI55Sw55S6IOWNg-S7o-eUsOWMuiDmnbHkuqzpg70gMTAxLTAwNDE!5e0!3m2!1sja!2sjp!4v1756303528230!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.229715351958!2d139.768929176043!3d35.69596432916414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c02eb6b69f9%3A0x1470113cb866bedf!2zTWEgU3F1YXJlIEFraWhhYmFyYSwgNGYg77yS5LiB55uuLe-8kS3vvJEg56We55Sw6aCI55Sw55S6IOWNg-S7o-eUsOWMuiDmnbHkuqzpg70gMTAxLTAwNDE!5e0!3m2!1sja!2sjp!4v1756303331782!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="text-center mt-12">
@@ -284,9 +391,24 @@
         </div>
     </footer>
 
+    <!-- Interactive Elements -->
+    <div id="ai-professor">
+        <div id="ai-professor-icon">🤖</div>
+        <div id="ai-professor-bubble">
+            <p id="ai-professor-text">みんてくへようこそ！</p>
+        </div>
+    </div>
+    <div id="mintech-ninja">🥷</div>
+    <div id="ninja-message-box">
+        <p id="ninja-text"></p>
+    </div>
+    <div id="smoke-bomb">💨</div>
+    <div id="animation-overlay"></div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const shareUrl = encodeURIComponent('https://kagekin.github.io/mintech2025/');
+            // Share Buttons Logic
+            const shareUrl = encodeURIComponent('https://araimono.github.io/mintech/');
             const shareText = encodeURIComponent('みんなのテクノロジーお披露目会 - みんてく🎉 #みんてく');
 
             const twitterShareLink = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`;
@@ -294,6 +416,235 @@
 
             const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
             document.getElementById('facebook-share').href = facebookShareLink;
+
+            // AI Professor Logic
+            const professorBubble = document.getElementById('ai-professor-bubble');
+            const professorText = document.getElementById('ai-professor-text');
+            const professorMessages = [
+                "AI、Web3、メタバース…最先端技術が集結！",
+                "参加費は無料じゃ！気軽に来てくれ！",
+                "君の作ったもの、ぜひ見せておくれ！",
+                "新しい出会いが君を待っておるぞ！",
+                "技術好きにはたまらんイベントじゃ！",
+                "学生も社会人も大歓迎じゃぞ！",
+                "神田オフィスで待っておる！",
+                "トークセッションも面白いぞ！",
+                "交流が一番の目的じゃからのう！",
+                "何かインスピレーションが得られるはずじゃ！",
+                "AicommuはAI時代のコミュニティじゃ！",
+                "4DLはAI人材のリスキリングを提供しておる！",
+                "ソーシャルノバはメタバースのプロじゃ！",
+                "Japan X Collegeは若者を応援しておる！",
+                "おさかなだお長崎はLocal DAOじゃ！",
+                "3DKOBOはメタクリエイター集団じゃ！",
+                "出展者との距離が近いのが魅力じゃ！",
+                "9月13日は予定を空けておくんじゃぞ！",
+                "友達を誘って来ても良いんじゃぞ！",
+                "最新の技術トレンドがわかるかもしれん！",
+                "わしも最新AIの研究成果を発表するかのう…？",
+                "ジャンルは問わん！自由な発表の場じゃ！",
+                "コラボレーションのきっかけになるやもしれん！",
+                "見るだけでも十分楽しめるぞ！",
+                "このサイトもわしが作ったAIで…というのは冗談じゃ！",
+                "お主の参加を心待ちにしておる！",
+                "何か質問はあるかの？…わしには答えられんが！",
+                "楽しい一日になること間違いなしじゃ！",
+                "技術で未来を創造するのじゃ！",
+                "さあ、参加登録ボタンをクリックじゃ！"
+            ];
+
+            function showProfessorMessage() {
+                professorBubble.style.opacity = '0';
+                setTimeout(() => {
+                    const randomIndex = Math.floor(Math.random() * professorMessages.length);
+                    professorText.textContent = professorMessages[randomIndex];
+                    professorBubble.style.opacity = '1';
+                }, 500);
+            }
+            
+            setTimeout(() => {
+                showProfessorMessage();
+                setInterval(showProfessorMessage, 10000);
+            }, 2000);
+
+
+            // Ninja Logic
+            const ninja = document.getElementById('mintech-ninja');
+            const messageBox = document.getElementById('ninja-message-box');
+            const messageText = document.getElementById('ninja-text');
+            const smokeBomb = document.getElementById('smoke-bomb');
+
+            function showNinja() {
+                if (Math.random() < 0.2) { // 20% chance to appear every 15 seconds
+                    ninja.style.display = 'block';
+                    setTimeout(() => {
+                        ninja.style.display = 'none';
+                    }, 5000); // Disappears after 5 seconds if not clicked
+                }
+            }
+
+            setInterval(showNinja, 15000);
+
+            ninja.addEventListener('click', () => {
+                ninja.style.display = 'none';
+                
+                messageText.textContent = 'ややっ！みんてくニンジャを見抜くとは、お主やりおる！';
+                messageBox.style.display = 'block';
+
+                setTimeout(() => {
+                    messageText.textContent = 'AI忍術クモガクレWeb！！';
+                }, 2500);
+                
+                setTimeout(() => {
+                    messageBox.style.display = 'none';
+                    smokeBomb.style.display = 'block';
+                    // Reset smoke bomb animation
+                    smokeBomb.style.animation = 'none';
+                    setTimeout(() => {
+                         smokeBomb.style.animation = 'smoke-puff 1.5s forwards';
+                    }, 10);
+                }, 4500);
+
+                setTimeout(() => {
+                    smokeBomb.style.display = 'none';
+                }, 6000);
+            });
+
+            // Card Animation Logic
+            const overlay = document.getElementById('animation-overlay');
+            const techCard = document.getElementById('tech-card');
+            const talkCard = document.getElementById('talk-card');
+            const networkCard = document.getElementById('network-card');
+            
+            const animationTexts = {
+                tech: "技術展示！ それは人類の英知を結集した、テクノロジーのわくわく展示！",
+                talk: "トークセッション！ 熱い想いを語れ！ 知識と情熱が交差する瞬間！",
+                network: "自由な交流！ 新たな出会いがここにある！ 未来のコラボは君たちの中に！"
+            };
+            
+            const animationEmojis = {
+                tech: ['🤖', '💻', '🚀', '💡', '⚙️', '⚛️', '🛰️', '🔬', '🧬'],
+                talk: ['🧑‍🏫', '🎤', '🗣️', '👏', '💬', '📢', '🙋‍♀️', '🙋‍♂️', '🤝'],
+                network: ['🦊', '🦁', '🐼', '🐨', '🐯', '🐸', '🐵', '🦄', '🦓', '🐘', '🦒', '🦉']
+            };
+
+            const playAnimation = (animationType, text) => {
+                overlay.innerHTML = ''; // Clear previous animation
+                overlay.classList.add('active');
+
+                const canvas = document.createElement('canvas');
+                overlay.appendChild(canvas);
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                // --- Text Animation Setup ---
+                let textParticles = [];
+                const words = text.split(' ');
+                words.forEach((word, index) => {
+                    textParticles.push({
+                        text: word,
+                        x: Math.random() < 0.5 ? -200 : canvas.width + 200,
+                        y: Math.random() * canvas.height,
+                        tx: canvas.width / 2 + (Math.random() - 0.5) * 400,
+                        ty: canvas.height / 2 + (Math.random() - 0.5) * 300,
+                        size: Math.random() * 30 + 25,
+                        opacity: 0,
+                        delay: index * 5 
+                    });
+                });
+                
+                // --- Emoji Animation Setup ---
+                let emojiParticles = [];
+                const emojis = animationEmojis[animationType];
+                for(let i = 0; i < 40; i++) {
+                    emojiParticles.push({
+                        emoji: emojis[Math.floor(Math.random() * emojis.length)],
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        vx: (Math.random() - 0.5) * 4,
+                        vy: (Math.random() - 0.5) * 4,
+                        size: Math.random() * 40 + 20,
+                        opacity: 0
+                    });
+                }
+
+
+                function animateParticles() {
+                    // Animate Text
+                    textParticles.forEach(p => {
+                        if (frame > p.delay) {
+                            p.x += (p.tx - p.x) * 0.05;
+                            p.y += (p.ty - p.y) * 0.05;
+
+                            if (frame < p.delay + 80) {
+                                p.opacity = Math.min(1, p.opacity + 0.02);
+                            } else if (frame > 180) {
+                                p.opacity = Math.max(0, p.opacity - 0.025);
+                            }
+
+                            let finalX = p.x;
+                            let finalY = p.y;
+                            
+                            if (frame > 100 && frame < 180) { // Shaking phase
+                                finalX += (Math.random() - 0.5) * 5;
+                                finalY += (Math.random() - 0.5) * 5;
+                            }
+
+                            ctx.font = `900 ${p.size}px 'Noto Sans JP'`;
+                            ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            ctx.shadowColor = "rgba(96, 165, 250, 0.7)";
+                            ctx.shadowBlur = 15;
+                            ctx.fillText(p.text, finalX, finalY);
+                            ctx.shadowBlur = 0;
+                        }
+                    });
+                    
+                    // Animate Emojis
+                    emojiParticles.forEach(p => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        
+                        if (frame < 80) {
+                            p.opacity = Math.min(1, p.opacity + 0.02);
+                        } else if (frame > 180) {
+                            p.opacity = Math.max(0, p.opacity - 0.025);
+                        }
+
+                        if (p.x < -50 || p.x > canvas.width + 50 || p.y < -50 || p.y > canvas.height + 50) {
+                            // Reset particle
+                            p.x = Math.random() * canvas.width;
+                            p.y = Math.random() < 0.5 ? -50 : canvas.height + 50;
+                        }
+
+                        ctx.font = `${p.size}px sans-serif`;
+                        ctx.globalAlpha = p.opacity;
+                        ctx.fillText(p.emoji, p.x, p.y);
+                        ctx.globalAlpha = 1.0;
+                    });
+                }
+
+                // --- Main Animation Loop ---
+                let frame = 0;
+                function animate() {
+                    if (frame > 210) return;
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    animateParticles();
+                    frame++;
+                    requestAnimationFrame(animate);
+                }
+                animate();
+
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                }, 3500);
+            };
+
+            techCard.addEventListener('click', () => playAnimation('tech', animationTexts.tech));
+            talkCard.addEventListener('click', () => playAnimation('talk', animationTexts.talk));
+            networkCard.addEventListener('click', () => playAnimation('network', animationTexts.network));
         });
     </script>
 
