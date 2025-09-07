@@ -261,21 +261,33 @@
                  <div class="section-title-container">
                     <h2 class="section-title">イベント内容</h2>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div id="tech-card" class="card p-8 clickable-card">
                         <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-laptop-code"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">技術作品の展示</h3>
-                        <p class="text-gray-400">AI、Web3、メタバースなど、どんな分野の技術作品でも展示できます！ジャンルは問わないので、自由に発表してくださいね😊</p>
+                        <p class="text-gray-400 flex-grow">AI、Web3、メタバースなど、どんな分野の技術作品でも展示できます！ジャンルは問わないので、自由に発表してくださいね😊</p>
                     </div>
                     <div id="talk-card" class="card p-8 clickable-card">
                         <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-microphone"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">トークセッション</h3>
-                        <p class="text-gray-400">自分の活動や技術についてみんなに発表できるチャンスです！みんなで知識をシェアして、一緒に学び合いましょう🚀</p>
+                        <p class="text-gray-400 flex-grow">自分の活動や技術についてみんなに発表できるチャンスです！みんなで知識をシェアして、一緒に学び合いましょう🚀</p>
+                    </div>
+                    <div id="lt-card" class="card p-8 clickable-card">
+                        <div class="text-4xl text-amber-400 mb-4"><i class="fas fa-bolt"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-white">飛び入りLT会</h3>
+                        <p class="text-gray-400 flex-grow">5分間のショートプレゼン大会！自分の活動や作品をみんなにアピールしよう！</p>
+                        <div class="mt-4 pt-4 border-t border-gray-700 text-left">
+                            <p class="text-sm text-gray-300 mt-2">
+                                <strong class="text-white">13:00〜</strong> 先着10名！<br>
+                                希望者は参加フォーム備考欄に【名前・タイトル】を記入！<br>
+                                <span class="text-xs text-gray-500">※開始10分前までに会場へ。</span>
+                            </p>
+                        </div>
                     </div>
                     <div id="network-card" class="card p-8 clickable-card">
                         <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-users"></i></div>
                         <h3 class="text-xl font-bold mb-2 text-white">自由な交流</h3>
-                        <p class="text-gray-400">出展者も来場者もみんなで気軽におしゃべりや情報交換ができる環境を用意しています！</p>
+                        <p class="text-gray-400 flex-grow">出展者も来場者もみんなで気軽におしゃべりや情報交換ができる環境を用意しています！</p>
                     </div>
                 </div>
             </div>
@@ -515,17 +527,20 @@
             const techCard = document.getElementById('tech-card');
             const talkCard = document.getElementById('talk-card');
             const networkCard = document.getElementById('network-card');
+            const ltCard = document.getElementById('lt-card');
             
             const animationTexts = {
                 tech: "技術展示！ それは人類の英知を結集した、テクノロジーのわくわく展示！",
                 talk: "トークセッション！ 熱い想いを語れ！ 知識と情熱が交差する瞬間！",
-                network: "自由な交流！ 新たな出会いがここにある！ 未来のコラボは君たちの中に！"
+                network: "自由な交流！ 新たな出会いがここにある！ 未来のコラボは君たちの中に！",
+                lt: "飛び入りLT会！ 5分に魂を込めろ！ 君の情熱、見せてみろ！"
             };
             
             const animationEmojis = {
                 tech: ['🤖', '💻', '🚀', '💡', '⚙️', '⚛️', '🛰️', '🔬', '🧬'],
                 talk: ['🧑‍🏫', '🎤', '🗣️', '👏', '💬', '📢', '🙋‍♀️', '🙋‍♂️', '🤝'],
-                network: ['🦊', '🦁', '🐼', '🐨', '🐯', '🐸', '🐵', '🦄', '🦓', '🐘', '🦒', '🦉']
+                network: ['🦊', '🦁', '🐼', '🐨', '🐯', '🐸', '🐵', '🦄', '🦓', '🐘', '🦒', '🦉'],
+                lt: ['⚡️', '🔥', '⏱️', '📣', '💡', '🌟', '💪']
             };
 
             const playAnimation = (animationType, text) => {
@@ -645,8 +660,10 @@
             techCard.addEventListener('click', () => playAnimation('tech', animationTexts.tech));
             talkCard.addEventListener('click', () => playAnimation('talk', animationTexts.talk));
             networkCard.addEventListener('click', () => playAnimation('network', animationTexts.network));
+            ltCard.addEventListener('click', () => playAnimation('lt', animationTexts.lt));
         });
     </script>
 
 </body>
 </html>
+
