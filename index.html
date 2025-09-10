@@ -364,6 +364,109 @@
             </div>
         </section>
 
+        <!-- Time Table Section -->
+        <section id="timetable" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="section-title-container">
+                    <h2 class="section-title">タイムテーブル</h2>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- Timeline Item -->
+                    <div class="flex items-start sm:space-x-8">
+                        <div class="hidden sm:flex flex-col items-center mr-4">
+                           <div>
+                                <div class="flex items-center justify-center w-10 h-10 border-2 border-amber-400 rounded-full">
+                                    <i class="fas fa-clock text-amber-400"></i>
+                                </div>
+                            </div>
+                            <div class="w-px h-full bg-gray-700"></div>
+                        </div>
+                        <div class="w-full sm:w-auto sm:text-right sm:pr-8 flex-shrink-0 mb-4 sm:mb-0">
+                            <p class="font-bold text-lg text-amber-400">11:00</p>
+                        </div>
+                        <div class="flex-1 card p-6 !mt-0">
+                            <h3 class="font-bold text-xl text-white">イベント OPEN</h3>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                    <div class="flex items-start sm:space-x-8">
+                         <div class="hidden sm:flex flex-col items-center mr-4">
+                           <div>
+                                <div class="flex items-center justify-center w-10 h-10 border-2 border-indigo-400 rounded-full">
+                                    <i class="fas fa-microphone text-indigo-400"></i>
+                                </div>
+                            </div>
+                            <div class="w-px h-full bg-gray-700"></div>
+                        </div>
+                        <div class="w-full sm:w-auto sm:text-right sm:pr-8 flex-shrink-0 mb-4 sm:mb-0">
+                            <p class="font-bold text-lg text-indigo-400">12:00～12:40</p>
+                        </div>
+                        <div class="flex-1 card p-6 !mt-0">
+                            <h3 class="font-bold text-xl text-white">トークセッション1</h3>
+                            <p class="mt-2 text-gray-300">AI×DAOで「場」を設計する：学び・若者・地域をつなぐ最小実装</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                     <div class="flex items-start sm:space-x-8">
+                         <div class="hidden sm:flex flex-col items-center mr-4">
+                           <div>
+                                <div class="flex items-center justify-center w-10 h-10 border-2 border-amber-400 rounded-full">
+                                    <i class="fas fa-bolt text-amber-400"></i>
+                                </div>
+                            </div>
+                            <div class="w-px h-full bg-gray-700"></div>
+                        </div>
+                        <div class="w-full sm:w-auto sm:text-right sm:pr-8 flex-shrink-0 mb-4 sm:mb-0">
+                            <p class="font-bold text-lg text-amber-400">13:00～14:00</p>
+                        </div>
+                        <div class="flex-1 card p-6 !mt-0">
+                            <h3 class="font-bold text-xl text-white">エントリー制LT会</h3>
+                            <p class="mt-2 text-gray-300">5分間のショートプレゼン大会！自分の活動や作品をみんなにアピールしよう！</p>
+                        </div>
+                    </div>
+                     <!-- Timeline Item -->
+                     <div class="flex items-start sm:space-x-8">
+                         <div class="hidden sm:flex flex-col items-center mr-4">
+                           <div>
+                                <div class="flex items-center justify-center w-10 h-10 border-2 border-indigo-400 rounded-full">
+                                     <i class="fas fa-microphone text-indigo-400"></i>
+                                </div>
+                            </div>
+                            <div class="w-px h-full bg-gray-700"></div>
+                        </div>
+                        <div class="w-full sm:w-auto sm:text-right sm:pr-8 flex-shrink-0 mb-4 sm:mb-0">
+                            <p class="font-bold text-lg text-indigo-400">15:00～15:40</p>
+                        </div>
+                        <div class="flex-1 card p-6 !mt-0">
+                            <h3 class="font-bold text-xl text-white">トークセッション2</h3>
+                            <p class="mt-2 text-gray-300">メタバース×AI×3Dものづくり実装論：小さく始めて黒字化する導線設計</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item -->
+                     <div class="flex items-start sm:space-x-8">
+                         <div class="hidden sm:flex flex-col items-center mr-4">
+                           <div>
+                                <div class="flex items-center justify-center w-10 h-10 border-2 border-amber-400 rounded-full">
+                                    <i class="fas fa-flag-checkered text-amber-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-auto sm:text-right sm:pr-8 flex-shrink-0 mb-4 sm:mb-0">
+                            <p class="font-bold text-lg text-amber-400">16:00</p>
+                        </div>
+                        <div class="flex-1 card p-6 !mt-0">
+                            <h3 class="font-bold text-xl text-white">イベント CLOSE</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Exhibiting Communities -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <div class="section-title-container">
+                    <h2 class="section-title">出展コミュニティ</h2>
         <!-- Event Details -->
         <section id="details" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
@@ -660,7 +763,7 @@
             techCard.addEventListener('click', () => playAnimation('tech', animationTexts.tech));
             talkCard.addEventListener('click', () => playAnimation('talk', animationTexts.talk));
             networkCard.addEventListener('click', () => playAnimation('network', animationTexts.network));
-            ltCard.addEventListener('click', () => playAnimation('lt', animationTexts.lt));
+            ltCard.addEventListener('click', () => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf-MbC3LWG4HF75Ni-anVb7uMWP4m_DVz2nFVXdC9zFjBAd5w/viewform', '_blank', 'noopener,noreferrer'));
         });
     </script>
 
